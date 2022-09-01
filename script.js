@@ -17,8 +17,8 @@ var createPlayer = (name, marker) => {
 };
 var gameBoard = {
   theGameboard: ["", "", "", "", "", "", "", "", ""],
-  playerO: createPlayer("Nikos", "O"),
-  playerX: createPlayer("Sandra", "X"),
+  playerO: createPlayer("Player 1", "O"),
+  playerX: createPlayer("Player 2", "X"),
 };
 //--- GLOBAL VARIABLES  ---
 let activePlayer = gameBoard.playerO;
