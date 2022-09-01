@@ -3,25 +3,27 @@
 }
 
 #newGame {
-    border: 1px solid black;
+    border: 1px solid aliceblue;
     text-align: center;
 }
 
-
+h1 {
+    text-align: center;
+}
 
 #gameBoard {
     margin: auto;
-    border: 1px solid black;
+    border: 1px solid aliceblue;
     width: 300px;
     height: 300px;
     grid-template: repeat(3, 1fr) / repeat(3, 1fr);
 }
 
 #gameBoard>div {
-    border: 1px solid black;
+    border: 1px solid aliceblue;
     width: 100px;
     height: 100px;
-    font-size: 50px;
+    font-size: 75px;
 }
 
 .grid-center {
@@ -32,8 +34,11 @@
 
 * {
     box-sizing: border-box;
+    color: aliceblue;
+    user-select: none;
 }
 
 body {
+    background-color: #111;
     margin: auto;
 }
