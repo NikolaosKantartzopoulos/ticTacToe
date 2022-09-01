@@ -10,7 +10,6 @@ let c5 = document.getElementById("c5");
 let c6 = document.getElementById("c6");
 let c7 = document.getElementById("c7");
 let c8 = document.getElementById("c8");
-//let cellsDOM = document.querySelectorAll(".slot");
 
 //---	OBJECTS    ---
 var createPlayer = (name, marker) => {
@@ -41,7 +40,6 @@ var menu = (() => {
 var gameFlow = (() => {
   let round = (playerA, playerB) => {
     console.log(`gameFlow turnCounter = ${turnCounter}`);
-
     if (turnCounter % 2 != 0) {
       activePlayer = playerA;
       console.log(
@@ -127,12 +125,7 @@ var domControl = (() => {
 
     gameFlow.round(gameBoard.playerO, gameBoard.playerX);
   };
-  var render = () => {
-    domControl.clearScreen();
-
-    return {};
-  };
-  return { addMarker, clearScreen, render };
+  return { addMarker, clearScreen };
 })();
 
 //---	FUNCTIONS    ---
