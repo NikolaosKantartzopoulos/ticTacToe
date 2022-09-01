@@ -119,7 +119,8 @@ var domControl = (() => {
       gameFlow.win_check(player);
       turnCounter++;
       if (turnCounter == 10) {
-        alert("It's a tie!!!");
+        gameboardDOM.style.opacity = "0";
+        document.getElementById("win_block").textContent = `It's a tie!`;
       }
     }
 
