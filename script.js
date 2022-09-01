@@ -32,7 +32,8 @@ var menu = (() => {
     turnCounter = 1;
     domControl.clearScreen();
     gameBoard.theGameboard = ["", "", "", "", "", "", "", "", ""];
-    gameboardDOM.style.opacity = "1";
+    gameboardDOM.style =
+      "display: grid; justify-content: center; align-items: center;";
     gameFlow.round(gameBoard.playerO, gameBoard.playerX);
   };
   return { newGame };
@@ -89,7 +90,8 @@ var gameFlow = (() => {
         gameBoard.theGameboard[4] == gameBoard.theGameboard[6] &&
         gameBoard.theGameboard[2] != "")
     ) {
-      gameboardDOM.style.opacity = "0";
+      domControl.endGameFreeze();
+
       document.getElementById(
         "win_block"
       ).textContent = `${activePlayer.name} wins!`;
@@ -105,6 +107,9 @@ var domControl = (() => {
       element.textContent = "";
     });
   };
+  var endGameFreeze = () => {
+    gameboardDOM.style.display = "none";
+  };
   var addMarker = (player, slotId) => {
     if (!gameFlow.isValidPosition(slotId)) {
       //	Valid position???
@@ -119,14 +124,13 @@ var domControl = (() => {
       gameFlow.win_check(player);
       turnCounter++;
       if (turnCounter == 10) {
-        gameboardDOM.style.opacity = "0";
+        domControl.endGameFreeze();
         document.getElementById("win_block").textContent = `It's a tie!`;
       }
     }
-
     gameFlow.round(gameBoard.playerO, gameBoard.playerX);
   };
-  return { addMarker, clearScreen };
+  return { addMarker, clearScreen, endGameFreeze };
 })();
 
 //---	FUNCTIONS    ---
