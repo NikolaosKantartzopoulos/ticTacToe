@@ -1,7 +1,16 @@
-# Tic - Tac -Toe project
+# Tic - Tac - Toe project
 
-Simple project using vanilla JS.
+### Part of the Odin Project's course
+https://www.theodinproject.com/lessons/node-path-intermediate-html-and-css-admin-dashboard
 
-## Project's goal
+### Built using
+
+* Grid and Flex CSS
+* TailwindCSS
+
+### Project's objective
+
 * Understand and use event listeners.
-* Use of factory functions.
+
+### See it live!
+https://nikolaoskantartzopoulos.github.io/ticTacToe/
