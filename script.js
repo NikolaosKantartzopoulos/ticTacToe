@@ -123,7 +123,7 @@ var domControl = (() => {
       //);
       gameFlow.win_check(player);
       turnCounter++;
-      if (turnCounter == 10) {
+      if (turnCounter == 11) {
         domControl.endGameFreeze();
         document.getElementById("win_block").textContent = `It's a tie!`;
       }
